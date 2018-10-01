@@ -13,7 +13,7 @@ const facilities = ["car park", "pool"]
   var wrap;
 describe('a hotel should', ()=>{
     beforeEach(()=>{
-      wrap = shallow(<Hotel name={hotelName} />)
+      wrap = shallow(<Hotel name={hotelName} stars={stars} />)
     })
 
     it('have a name', ()=>{
@@ -33,6 +33,6 @@ describe('a hotel should', ()=>{
     })
 
     it('should have the right star rating', ()=>{
-        expect(wrap.find('.hotel-starts').text()).toBe(stars)
+        expect(wrap.find('.hotel-stars').text()).toEqual(stars.toString())
     })
 })
