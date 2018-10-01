@@ -1,9 +1,24 @@
 import React from 'react';
 
+const Stars = props =>{
+  return (<ul className="hotel-stars-wrapper">
+    {getArrayOfN(props.number)
+      .map(i=><li key={i} className="hotel-star" />)}
+  </ul>)}
+
+const getArrayOfN = n =>{
+  var arr = []
+  for(var i=0;i<n;i++){
+    arr.push(i)
+  }
+
+  return arr
+}
+
 const Hotel = props => (
   <li key={props.name} className="hotel">
     <div className="hotel-name">{props.name}</div>
-    <div className="hotel-stars-wrapper">{props.stars}</div>
+    <Stars number={props.stars}/>
     <div className="hotel-facilities"></div>
   </li> 
   )

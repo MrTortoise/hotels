@@ -1,5 +1,5 @@
 import React from 'react';
-import Enzyme, {shallow} from 'enzyme';
+import Enzyme, {shallow, mount} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 import {Hotel} from './HotelSearch'
@@ -11,12 +11,14 @@ const stars = 4
 const facilities = ["car park", "pool"]
 
 const hotel_name = '.hotel-name';
+const hotel_stars = '.hotel-stars-wrapper';
+const actual_stars = '.hotel-star'
 
   var wrap;
-const hotel_stars = '.hotel-stars-wrapper';
+
 describe('a hotel should', ()=>{
     beforeEach(()=>{
-      wrap = shallow(<Hotel name={hotelName} stars={stars} />)
+      wrap = mount(<Hotel name={hotelName} stars={stars} />)
     })
 
     it('have a name', ()=>{        
@@ -35,7 +37,7 @@ describe('a hotel should', ()=>{
         expect(wrap.find(hotel_name).text()).toBe(hotelName)
     })
 
-    it('should have the right star rating', ()=>{
-        expect(wrap.find(hotel_stars).text()).toEqual(stars.toString())
+    it('should have the same number of stars classes as stars', ()=>{
+        expect(wrap.find(actual_stars).length).toBe(stars)
     })
 })
