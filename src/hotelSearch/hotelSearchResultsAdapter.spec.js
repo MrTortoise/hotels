@@ -1,5 +1,5 @@
-const getHotels = () => {
-  return [
+const getHotels = (cb) => {
+  cb([
     {
       "name": "hotelone",
       "starRating": 5,
@@ -15,7 +15,7 @@ const getHotels = () => {
       "starRating": 3,
       "facilities": []
     }
-  ]
+  ])
 }
 
 describe('hotel results adapter', ()=>{
