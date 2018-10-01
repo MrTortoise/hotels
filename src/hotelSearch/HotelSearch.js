@@ -1,7 +1,11 @@
 import React from 'react';
 
 const Hotel = props => (
-  <li key={props.name} className="hotel">props.name</li> 
+  <li key={props.name} className="hotel">
+    <div className="hotel-name"></div>
+    <div className="hotel-stars"></div>
+    <div className="hotel-facilities"></div>
+  </li> 
   )
   
 const HotelSearch = (props) => (

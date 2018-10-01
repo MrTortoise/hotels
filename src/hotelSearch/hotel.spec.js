@@ -15,16 +15,16 @@ const hotel1 = {
 describe('a hotel should', ()=>{
     it('has a name', ()=>{
         const component = shallow(<Hotel hotel={[hotel1]} />)
-        expect(component.find('.name').length).toBe(1)
+        expect(component.find('.hotel-name').length).toBe(1)
     })
 
     it('has a star rating', ()=>{
         const component = shallow(<Hotel hotel={[hotel1]} />)
-        expect(component.find('.stars').length).toBe(1)
+        expect(component.find('.hotel-stars').length).toBe(1)
     })    
 
     it('has a facilities', ()=>{
         const component = shallow(<Hotel hotel={[hotel1]} />)
-        expect(component.find('.facilities').length).toBe(1)
+        expect(component.find('.hotel-facilities').length).toBe(1)
     })
 })
