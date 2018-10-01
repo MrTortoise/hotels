@@ -14,6 +14,7 @@ const hotel_name = '.hotel-name';
 const hotel_stars = '.hotel-stars-wrapper';
 const actual_stars = '.hotel-star'
 const hotel_facilities = '.hotel-facilities';
+const hotel_facility = '.hotel-facility'
 
   var wrap;
 
@@ -42,7 +43,11 @@ describe('a hotel should', ()=>{
         expect(wrap.find(actual_stars).length).toBe(stars)
     })
 
-    it('should show the correct facilities', ()=>{
-        expect(wrap.find(hotel_facilities).length).toBe(facilities.length)
+    it('should show the carpark facility', ()=>{
+        expect(wrap.find("hotel-facility-carpark").length).toBe(1)
+    })
+
+    it('should show the pool facility', ()=>{
+        expect(wrap.find("hotel-facility-pool").length).toBe(1)
     })
 })
