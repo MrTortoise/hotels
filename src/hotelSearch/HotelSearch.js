@@ -11,3 +11,4 @@ const HotelSearch = (props) => (
   )
     
 export default HotelSearch
+export {Hotel}
