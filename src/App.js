@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import {hotels} from './hotelSearch/hotelSearchResultsAdapter'
 import HotelSearch from './hotelSearch/HotelSearch'
 
 class App extends Component {
@@ -13,7 +14,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to a really underwhelming site</h1>
         </header>
         <section>
-          <HotelSearch hotels={[]}/>
+          <HotelSearch hotels={hotels}/>
         </section>
       </div>
     );
