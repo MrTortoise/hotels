@@ -4,7 +4,7 @@ import hotelFacilityToCss from './hotelFacilityToCss'
 const Stars = props =>{
   return (<div className="hotel-stars-wrapper">
     {getArrayOfN(props.number)
-      .map(i=><span key={i} className="hotel-star">&#9733 dave</span>)}
+      .map(i=><span key={i} className="hotel-star">★</span>)}
   </div>)}
 
 const Facilities = props =>{

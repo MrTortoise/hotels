@@ -9,5 +9,12 @@ describe('HotelSearch control should', ()=>{
         var elements = browser.elements('.hotel')
         expect(elements.value).to.have.length(3)    
     })
+
+    it('have a control to control ordering', ()=>{
+        var element = browser.element('.ordering')
+        console.log(JSON.stringify(element))
+        expect(element.type).to.not.equal('NoSuchElement')
+
+    })
 })
 
