@@ -40,4 +40,8 @@ describe('a hotel should', ()=>{
     it('should have the same number of stars classes as stars', ()=>{
         expect(wrap.find(actual_stars).length).toBe(stars)
     })
+
+    it('should show the correct facilities', ()=>{
+        expect(wrap.find(facilities).length).toBe(facilities.length)
+    })
 })

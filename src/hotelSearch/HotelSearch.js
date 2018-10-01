@@ -3,7 +3,7 @@ import React from 'react';
 const Stars = props =>{
   return (<ul className="hotel-stars-wrapper">
     {getArrayOfN(props.number)
-      .map(i=><li key={i} className="hotel-star" />)}
+      .map(i=><li key={i} className="hotel-star">&#9733 dave</li>)}
   </ul>)}
 
 const getArrayOfN = n =>{
