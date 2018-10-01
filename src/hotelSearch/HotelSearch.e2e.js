@@ -11,10 +11,11 @@ describe('HotelSearch control should', ()=>{
     })
 
     it('have a control to control ordering', ()=>{
-        var element = browser.element('.ordering')
-        console.log(JSON.stringify(element))
-        expect(element.type).to.not.equal('NoSuchElement')
+        expect(browser.isExisting('.ordering')).to.be.true
+    })
 
+    it('set order to descending when desc is clicked', ()=>{
+        expect(true).to.be.false
     })
 })
 

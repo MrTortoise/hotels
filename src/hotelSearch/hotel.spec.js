@@ -2,7 +2,7 @@ import React from 'react';
 import Enzyme, {shallow, mount} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
-import {Hotel} from './HotelSearch'
+import Hotel from './Hotel'
 
 Enzyme.configure({ adapter: new Adapter() });
 
