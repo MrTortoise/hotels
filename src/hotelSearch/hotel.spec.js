@@ -31,4 +31,8 @@ describe('a hotel should', ()=>{
     it('should have the right name', ()=>{
         expect(wrap.find('.hotel-name').text()).toBe(hotelName)
     })
+
+    it('should have the right star rating', ()=>{
+        expect(wrap.find('.hotel-starts').text()).toBe(stars)
+    })
 })

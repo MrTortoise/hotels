@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hotel = props => (
   <li key={props.name} className="hotel">
-    <div className="hotel-name"></div>
+    <div className="hotel-name">{props.name}</div>
     <div className="hotel-stars"></div>
     <div className="hotel-facilities"></div>
   </li> 
