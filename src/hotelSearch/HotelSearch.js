@@ -1,10 +1,10 @@
 import React from 'react';
 
 const Stars = props =>{
-  return (<ul className="hotel-stars-wrapper">
+  return (<div className="hotel-stars-wrapper">
     {getArrayOfN(props.number)
-      .map(i=><li key={i} className="hotel-star">&#9733 dave</li>)}
-  </ul>)}
+      .map(i=><span key={i} className="hotel-star">&#9733 dave</span>)}
+  </div>)}
 
 const getArrayOfN = n =>{
   var arr = []
@@ -15,11 +15,15 @@ const getArrayOfN = n =>{
   return arr
 }
 
+const Facilities = props =>(<div className="hotel-facilities">
+{props.types.map(f=><span key={f} className="hotel-facility">{f}</span>)}
+</div>)
+
 const Hotel = props => (
   <li key={props.name} className="hotel">
     <div className="hotel-name">{props.name}</div>
     <Stars number={props.stars}/>
-    <div className="hotel-facilities"></div>
+    <Facilities types={props.facilities} />    
   </li> 
   )
   

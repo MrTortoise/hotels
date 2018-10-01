@@ -13,12 +13,13 @@ const facilities = ["car park", "pool"]
 const hotel_name = '.hotel-name';
 const hotel_stars = '.hotel-stars-wrapper';
 const actual_stars = '.hotel-star'
+const hotel_facilities = '.hotel-facilities';
 
   var wrap;
 
 describe('a hotel should', ()=>{
     beforeEach(()=>{
-      wrap = mount(<Hotel name={hotelName} stars={stars} />)
+      wrap = mount(<Hotel name={hotelName} stars={stars} facilities={facilities} />)
     })
 
     it('have a name', ()=>{        
@@ -30,7 +31,7 @@ describe('a hotel should', ()=>{
     })    
 
     it('have the  facilities', ()=>{
-        expect(wrap.find('.hotel-facilities').length).toBe(1)
+        expect(wrap.find(hotel_facilities).length).toBe(1)
     })
 
     it('should have the right name', ()=>{
@@ -42,6 +43,6 @@ describe('a hotel should', ()=>{
     })
 
     it('should show the correct facilities', ()=>{
-        expect(wrap.find(facilities).length).toBe(facilities.length)
+        expect(wrap.find(hotel_facilities).length).toBe(facilities.length)
     })
 })
