@@ -15,7 +15,7 @@ const Facilities = props =>{
 const Hotel = props => (
   <li key={props.name} className="hotel">
     <div className="hotel-name">{props.name}</div>
-    <Stars number={props.stars}/>
+    <Stars number={props.starRating}/>
     <Facilities types={props.facilities} />    
   </li> 
   )

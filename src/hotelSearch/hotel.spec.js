@@ -20,7 +20,7 @@ const hotel_facility = '.hotel-facility'
 
 describe('a hotel should', ()=>{
     beforeEach(()=>{
-      wrap = mount(<Hotel name={hotelName} stars={stars} facilities={facilities} />)
+      wrap = mount(<Hotel name={hotelName} starRating={stars} facilities={facilities} />)
     })
 
     it('have a name', ()=>{        
