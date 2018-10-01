@@ -5,12 +5,12 @@ import Adapter from 'enzyme-adapter-react-16';
 Enzyme.configure({ adapter: new Adapter() });
 
 const HotelSearch = () => (
-    <div>HotelSearch</div>
-)
-
-describe('Search for hotels', ()=>{
+  <div>HotelSearch</div>
+  )
+  
+  describe('Search for hotels', ()=>{
     it('should return a list of hotel components', ()=>{
-        const component = shallow(<HotelSearch />)
-        expect(component.exists()).toEqual(true);
+      const component = shallow(<HotelSearch />)
+      expect(component.exists()).toEqual(true);
     })
-})
+  })

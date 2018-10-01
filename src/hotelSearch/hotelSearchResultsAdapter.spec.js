@@ -9,4 +9,3 @@ describe('hotel results adapter', ()=>{
     getHotels(cb)
   })    
 })
-  
