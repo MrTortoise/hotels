@@ -1,6 +1,7 @@
 import React from 'react';
 
-const HotelSearch = () => (
+
+const HotelSearch = (hotels) => (
   <div className="hotel-search">HotelSearch</div>
   )
   
