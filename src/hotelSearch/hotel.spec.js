@@ -6,25 +6,29 @@ import {Hotel} from './HotelSearch'
 
 Enzyme.configure({ adapter: new Adapter() });
 
-const hotel1 = {
-    "name": "hotelone",
-    "starRating": 5,
-    "facilities": ["car park", "pool"]
-  }
+const hotelName = 'hotelOne'
+const stars = 4
+const facilities = ["car park", "pool"]
 
+  var wrap;
 describe('a hotel should', ()=>{
-    it('has a name', ()=>{
-        const component = shallow(<Hotel hotel={[hotel1]} />)
-        expect(component.find('.hotel-name').length).toBe(1)
+    beforeEach(()=>{
+      wrap = shallow(<Hotel name={hotelName} />)
     })
 
-    it('has a star rating', ()=>{
-        const component = shallow(<Hotel hotel={[hotel1]} />)
-        expect(component.find('.hotel-stars').length).toBe(1)
+    it('have a name', ()=>{
+        expect(wrap.find('.hotel-name').length).toBe(1)
+    })
+
+    it('have a rating', ()=>{
+        expect(wrap.find('.hotel-stars').length).toBe(1)
     })    
 
-    it('has a facilities', ()=>{
-        const component = shallow(<Hotel hotel={[hotel1]} />)
-        expect(component.find('.hotel-facilities').length).toBe(1)
+    it('have the  facilities', ()=>{
+        expect(wrap.find('.hotel-facilities').length).toBe(1)
+    })
+
+    it('should have the right name', ()=>{
+        expect(wrap.find('.hotel-name').text()).toBe(hotelName)
     })
 })
