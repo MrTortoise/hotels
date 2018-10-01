@@ -9,7 +9,7 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('Search for hotels', ()=>{
   it('should have a hotel search', ()=>{
-    const component = shallow(<HotelSearch />)
+    const component = shallow(<HotelSearch hotels={[{name:'test'}]} />)
     expect(component.exists()).toEqual(true);
   })
 
