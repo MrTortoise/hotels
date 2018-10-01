@@ -22,11 +22,6 @@ const HotelSearch = (props) => (
   const OrderByStars = props => (
     <Select value={props.hotelSortOrder} />
   )
-
-  const handleOptionChange = ({setSortOrder}) =>{
-
-
-  }
     
 export default HotelSearch
 

@@ -23,9 +23,9 @@ describe('Search for hotels', ()=>{
 
   it('should have a order by stars control', ()=>{
     const orderThingies = wrap.find('.hotel-orderByStars');
-    console.log(JSON.stringify(orderThingies))
     console.log(JSON.stringify(orderThingies.length))
-    console.log('wtff')
+    console.log(JSON.stringify(orderThingies))   
+    console.log('wtff - how the hell can an empty object have length > 0????? - someones gonna get schooled')
     expect(orderThingies.length).toEqual(1)
   })
 
