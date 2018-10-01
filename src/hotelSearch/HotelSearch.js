@@ -1,4 +1,5 @@
 import React from 'react';
+import hotelFacilityToCss from './hotelFacilityToCss'
 
 const Stars = props =>{
   return (<div className="hotel-stars-wrapper">
@@ -6,18 +7,10 @@ const Stars = props =>{
       .map(i=><span key={i} className="hotel-star">&#9733 dave</span>)}
   </div>)}
 
-const getArrayOfN = n =>{
-  var arr = []
-  for(var i=0;i<n;i++){
-    arr.push(i)
-  }
-
-  return arr
-}
-
-const Facilities = props =>(<div className="hotel-facilities">
-{props.types.map(f=><span key={f} className="hotel-facility">{f}</span>)}
-</div>)
+const Facilities = props =>{
+  return (<div className="hotel-facilities">
+{props.types.map(f=><span key={f} className={hotelFacilityToCss(f)}>{f}</span>)}
+</div>)}
 
 const Hotel = props => (
   <li key={props.name} className="hotel">
@@ -35,3 +28,13 @@ const HotelSearch = (props) => (
     
 export default HotelSearch
 export {Hotel}
+
+
+const getArrayOfN = n =>{
+  var arr = []
+  for(var i=0;i<n;i++){
+    arr.push(i)
+  }
+
+  return arr
+}

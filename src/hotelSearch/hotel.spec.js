@@ -44,10 +44,10 @@ describe('a hotel should', ()=>{
     })
 
     it('should show the carpark facility', ()=>{
-        expect(wrap.find("hotel-facility-carpark").length).toBe(1)
+        expect(wrap.find(".hotel-facility-carpark").length).toBe(1)
     })
 
     it('should show the pool facility', ()=>{
-        expect(wrap.find("hotel-facility-pool").length).toBe(1)
+        expect(wrap.find(".hotel-facility-pool").length).toBe(1)
     })
 })
