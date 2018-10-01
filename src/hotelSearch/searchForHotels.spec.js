@@ -13,9 +13,9 @@ describe('Search for hotels', ()=>{
     expect(component.exists()).toEqual(true);
   })
 
-  it('should have as many results as passed in', (done)=>{
-    
+  it('should have as many results as passed in', (done)=>{    
     hotelAdapter((hotels)=>{
+      expect(hotels.length).toEqual(3)
       const component = shallow(<HotelSearch hotels={hotels}/>)
       expect(component.find('.hotel').length).toEqual(3)
       done()
