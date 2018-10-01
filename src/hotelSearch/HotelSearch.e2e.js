@@ -15,6 +15,7 @@ describe('HotelSearch control should', ()=>{
     })
 
     it('set order to descending when desc is clicked', ()=>{
+        browser.click('.order-desc');
         expect(true).to.be.false
     })
 })

@@ -1,21 +1,32 @@
-import React from 'react';
+import React from 'react'
 import Hotel from './Hotel'
+import Select from 'react-select'
 
   
 const HotelSearch = (props) => (
-  <div className="hotel-search">
-    <div className="ordering"/>
+  <section className="hotel-search">
+    <OrderByStars 
+    className="hotel-orderByStars" 
+      hotelSortOrder={props.hotelSortOrder}
+      hotelSortOrderChanged={props.hotelSortOrderChanged}
+    />
     <ul>{props.hotels.map(Hotel)}</ul>
-  </div>
+  </section>
   )
+
+  const options = [
+    { value: 'asc', label: 'ascending' },
+    { value: 'desc', label: 'descending' }
+  ]
+
+  const OrderByStars = props => (
+    <Select value={props.hotelSortOrder} />
+  )
+
+  const handleOptionChange = ({setSortOrder}) =>{
+
+
+  }
     
 export default HotelSearch
 
-const getArrayOfN = n =>{
-  var arr = []
-  for(var i=0;i<n;i++){
-    arr.push(i)
-  }
-
-  return arr
-}
