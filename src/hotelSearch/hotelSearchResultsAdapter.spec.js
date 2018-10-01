@@ -19,7 +19,11 @@ const getHotels = () => {
 }
 
 describe('hotel results adapter', ()=>{
-  it('will return 3 hotels', ()=>{
-    expect(getHotels()).toHaveLength(3)
-  })
+  it('will return 3 hotels', (done)=>{
+    const cb = (results)=>{
+      expect(results).toHaveLength(3)
+      done()
+    }
+    getHotels(cb)
+  })    
 })
