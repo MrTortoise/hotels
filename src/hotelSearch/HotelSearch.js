@@ -1,9 +1,8 @@
 import React from 'react'
 import Hotel from './Hotel'
 import Select from 'react-select'
-
   
-const HotelSearch = (props) => (
+const HotelSearch = (props) => (  
   <section className="hotel-search">
     <OrderByStars 
     className="hotel-orderByStars" 
