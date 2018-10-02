@@ -1,9 +1,3 @@
-let todoId = 0;
-
-const nextId = () => {
-  todoId += 1;
-  return todoId;
-};
 
 const actions = {
   setHotelSortOrder(isAscending) {
@@ -17,5 +11,8 @@ const actions = {
 const hotelSortActionTypes = {
     SET_HOTEL_SORT_ORDER_DESC: 'SET_HOTEL_SORT_ORDER_DESC',
   };
+
+const initialState = {isAscending: true}
+const reducer = (state = initialState, _) => state;
   
-export {actions, hotelSortActionTypes}
+export {actions, reducer, initialState, hotelSortActionTypes}

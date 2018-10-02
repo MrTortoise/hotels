@@ -6,8 +6,8 @@ const HotelSearch = (props) => (
   <section className="hotel-search">
     <OrderByStars 
     className="hotel-orderByStars" 
-      hotelSortOrder={props.hotelSortOrder}
-      hotelSortOrderChanged={props.hotelSortOrderChanged}
+      hotelSortOrder = {props.hotelSortOrder}
+      hotelSortOrderChanged = {props.hotelSortOrderChanged}
     />
     <ul>{props.hotels.map(Hotel)}</ul>
   </section>
