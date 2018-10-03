@@ -1,26 +1,27 @@
 import React from 'react'
 import Hotel from './Hotel'
 import Select from 'react-select'
-  
-const HotelSearch = (props) => (  
+
+const HotelSearch = ({hotels, isAscending, onHotelSortOrderChanged}) => (  
   <section className="hotel-search">
-    <OrderByStars 
-    className="hotel-orderByStars" 
-      hotelSortOrder = {props.hotelSortOrder}
-      hotelSortOrderChanged = {props.hotelSortOrderChanged}
-    />
-    <ul>{props.hotels.map(Hotel)}</ul>
+    <Select className="hotel-orderByStars" 
+      value={isAscendingToOption(isAscending)}
+      options = {options} 
+      onChange = {onHotelSortOrderChanged}/>
+
+  <ul>{hotels.map(Hotel)}</ul>
   </section>
-  )
+)
 
-  const options = [
-    { value: 'asc', label: 'ascending' },
-    { value: 'desc', label: 'descending' }
-  ]
+const isAscendingToOption = isAscending =>{
+  if (isAscending) return 'asc'
 
-  const OrderByStars = props => (
-    <Select value={props.hotelSortOrder} />
-  )
-    
+  return 'desc'
+}
+ 
+const options = [
+  { value: 'asc', label: 'ascending' },
+  { value: 'desc', label: 'descending' }
+]
+  
 export default HotelSearch
-

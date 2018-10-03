@@ -1,7 +1,7 @@
 import React from 'react';
 import Enzyme, {mount} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import {hotels} from './hotelSearchResultsAdapter'
+import {hotels} from './getHotelSearchResults/hotelSearchResultsAdapter'
 
 import HotelSearch from './HotelSearch'
 
@@ -11,7 +11,10 @@ var wrap
 
 describe('Search for hotels', ()=>{
   beforeEach(()=>{
-    wrap = mount(<HotelSearch hotels={hotels}/>)
+    wrap = mount(<HotelSearch 
+      hotels={hotels}
+      hotelSortOrder = {true}
+      onHotelSortOrderChanged = {undefined}/>)
   })
   it('should have a hotel search', ()=>{
     expect(wrap.exists()).toEqual(true);
@@ -22,11 +25,10 @@ describe('Search for hotels', ()=>{
   })
 
   it('should have a order by stars control', ()=>{
-    const orderThingies = wrap.find('.hotel-orderByStars');
-    console.log(JSON.stringify(orderThingies.length))
-    console.log(JSON.stringify(orderThingies))   
-    console.log('wtff - how the hell can an empty object have length > 0????? - someones gonna get schooled')
-    expect(orderThingies.length).toEqual(1)
+    const orderThingies = wrap.find('.hotel-orderByStars')
+    // react-select puts the class on many sub components
+    // no doubt styling iwll be fun ...
+    expect(orderThingies.length).toBeGreaterThan(0)
   })
 
   it('should order descending when desccending pressed', ()=>{

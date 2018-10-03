@@ -17,7 +17,7 @@ const initialState = {
   hotelSearchResults: []
 }
 
-const reducer = (state = initialState, action) => { 
+const setHotelSortOrderReducer = (state = initialState, action) => { 
   switch (action.type){
     case hotelSortActionTypes.SET_HOTEL_SORT_ORDER_DESC:
     const isAsc = boolToIntForSort(action.isAscending)
@@ -26,9 +26,9 @@ const reducer = (state = initialState, action) => {
       hotelSearchResults: state.hotelSearchResults.sort((l,r)=> isAsc*(l.starRating-r.starRating)),
       isAscending: action.isAscending
     }
+    default:
+    return state
   }
-
-  return state
 }
 
 
@@ -38,4 +38,4 @@ const boolToIntForSort = (b) =>{
   return 1
 }
 
-export {actions, reducer, initialState, hotelSortActionTypes}
+export {actions, setHotelSortOrderReducer, initialState, hotelSortActionTypes}

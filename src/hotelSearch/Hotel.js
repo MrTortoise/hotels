@@ -11,22 +11,22 @@ const getArrayOfN = n =>{
     return arr
   }
 
-const Stars = props =>{
+const Stars = ({number}) =>{
   return (<div className="hotel-stars-wrapper">
-    {getArrayOfN(props.number)
+    {getArrayOfN(number)
       .map(i=><span key={i} className="hotel-star">★</span>)}
   </div>)}
 
-const Facilities = props =>{
+const Facilities = ({types}) =>{
   return (<div className="hotel-facilities">
-{props.types.map(f=><span key={f} className={hotelFacilityToCss(f)}>{f}</span>)}
+{types.map(f=><span key={f} className={hotelFacilityToCss(f)}>{f}</span>)}
 </div>)}
 
-const Hotel = props => (
-  <li key={props.name} className="hotel">
-    <div className="hotel-name">{props.name}</div>
-    <Stars number={props.starRating}/>
-    <Facilities types={props.facilities} />    
+const Hotel = ({name, starRating, facilities}) => (
+  <li key={name} className="hotel">
+    <div className="hotel-name">{name}</div>
+    <Stars number={starRating}/>
+    <Facilities types={facilities} />    
   </li> 
   )
 

@@ -11,12 +11,13 @@ describe('HotelSearch control should', ()=>{
     })
 
     it('have a control to control ordering', ()=>{
-        expect(browser.isExisting('.ordering')).to.be.true
+        expect(browser.isExisting('.hotel-orderByStars')).to.be.true
+
     })
 
-    it('set order to descending when desc is clicked', ()=>{
-        browser.click('.order-desc');
-        expect(true).to.be.false
-    })
+    // it('set order to descending when desc is clicked', ()=>{
+    //     browser.click('.order-desc');
+    //     expect(true).to.be.false
+    // })
 })
 
