@@ -1,5 +1,5 @@
 import { combineReducers, createStore } from 'redux';
-import {setHotelSortOrderReducer} from './hotelSearch/setHotelResultsOrder'
+import {setHotelSortOrderReducer} from './hotelSearch/hotelSortOrder/setHotelResultsOrder'
 
 const reducers = combineReducers({
     setHotelSortOrderReducer

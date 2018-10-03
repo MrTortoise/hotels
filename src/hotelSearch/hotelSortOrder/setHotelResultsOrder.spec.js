@@ -1,5 +1,5 @@
 import {actions, setHotelSortOrderReducer,initialState, hotelSortActionTypes} from './setHotelResultsOrder'
-import {hotels} from './getHotelSearchResults/hotelSearchResultsAdapter'
+import {hotels} from '../getHotelSearchResults/hotelSearchResultsAdapter'
 
 describe('Set hotel Results order should', () => {
   const isAscending = true

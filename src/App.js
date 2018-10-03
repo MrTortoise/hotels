@@ -5,7 +5,7 @@ import './App.css';
 
 import {hotels} from './hotelSearch/getHotelSearchResults/hotelSearchResultsAdapter'
 import HotelSearch from './hotelSearch/HotelSearch'
-import {actions} from './hotelSearch/setHotelResultsOrder'
+import {actions} from './hotelSearch/hotelSortOrder/setHotelResultsOrder'
 
 export const App = ({setHotelSortOrder}) =>(
   <div className="App">

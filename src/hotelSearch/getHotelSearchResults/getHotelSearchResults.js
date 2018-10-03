@@ -16,3 +16,6 @@ export const getHotelSearchResultsReducer = (state = {}, action) =>{
     }
   }
 }
+
+// so this is *not* good practise.
+// 
